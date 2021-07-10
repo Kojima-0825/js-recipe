@@ -12,20 +12,16 @@ count += 1
 display.textContent = count
 }
 
-let number = 0
-
 minusoneButton.onclick = function() {
 
-    number -= 1
+    count -= 1
 
-    display.textContent = number
+    display.textContent = count
 }
-
-let figure = 1
 
 multypleTwo.onclick = function() {
 
-    figure  *= 2
+    count  *= 2
 
-    display.textContent = figure
+    display.textContent = count
 }
