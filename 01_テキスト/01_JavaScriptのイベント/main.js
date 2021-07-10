@@ -5,7 +5,7 @@ const alertMessage = function() {
   alert("クリックしたね")
 }
 
-button.onclick = alertMessage
+button.onmouseover = alertMessage
 
 const inputText = document.getElementById("input-text")
 const inputDate = document.getElementById("input-date")
@@ -18,9 +18,5 @@ inputText.oninput = logValue
 inputDate.oninput = logValue
 
 document.onkeydown = function(e) {
-    console.log(e.key)
-  }
-  
-  document.onkeydown = function(e) {
-    console.log(e.key)
-  }
+  console.log(e.key)
+}
