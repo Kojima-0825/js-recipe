@@ -10,6 +10,8 @@ inputElement.onkeypress = function(e) {
   }
 }
 
+
+
 const createCard = function(text) {
   const card = document.createElement("div")
   card.className = "card"
@@ -32,3 +34,4 @@ const todo = document.createElement("div")
 
   return card
 }
+

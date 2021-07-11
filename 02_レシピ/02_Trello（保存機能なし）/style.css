@@ -24,7 +24,26 @@ header {
   flex-wrap: nowrap;
   align-items: flex-start;
   height: 100vh;
-  padding: 52px 12px 12px 12px;
+  padding: 50px 12px 12px 12px;
+  overflow-x: auto;
+  background-color: #0076c2;
+}
+.sub-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 0px 12px 12px 12px;
+  overflow-x: auto;
+  background-color: #0076c2;
+}
+
+.third-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 0px ０px 12px 12px;
   overflow-x: auto;
   background-color: #0076c2;
 }
