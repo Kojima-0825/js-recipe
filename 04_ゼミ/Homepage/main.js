@@ -15,4 +15,7 @@ function viewSlide(className, slideNo = -1)
 	imgArray[slideNo].style.opacity = 1;
 	let msec = document.getElementById('slide_speed').value;
 	setTimeout(function(){viewSlide(className, slideNo);}, msec);
+
 }
+
+

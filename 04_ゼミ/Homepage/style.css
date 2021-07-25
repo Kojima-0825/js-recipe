@@ -9,3 +9,106 @@
 	height:100%;
 	object-fit:contain;
 }
+.slide {
+	position: absolute;
+	top: 20%;
+	left: 30%;
+}
+
+CSSを上手く使えば、動きのある表現が可能です。
+例えば、下のようなリンクを見かけたことはありませんか？
+
+[テキストの上にマウスを乗せてみてください]
+※スマートフォンやタブレットでは再現不可
+Googleへのリンク
+
+マウスを乗せると、下線が付いて色が変化しましたね！色んなサイトで見かける、よく使われるテクニックの１つです。
+
+これは、「マウスがテキストの上に乗ったら、アンダーラインを引いて、色を緑にしてください」とCSSで指定しています。
+
+マウスオーバーでの表現
+こういった演出を行えば「どのテキストがリンクなのか」が判別しやすく、使いやすくわかりやすいホームページとなります。
+
+リンクをコントロールするスタイル
+リンクに変化をつけるには、主に下の4つの要素でコントロールします。
+
+a:link　：アクセスしたことのないリンク
+a:visited　：アクセスしたことのあるリンク
+a:hover　：マウスが上に乗っている状態のリンク
+a:active　：クリック中のリンク
+これらの要素を使えば、リンク状態に変化をつけることができます。
+なお、「記述する順番」があるので注意しましょう。かならず、「a:link」→「a:visited」→「a:hover」→「a:active」の順に記述しなければなりません。
+
+記述する順番
+a:link
+a:visited
+a:hover
+a:active
+状態が変化するリンクの作成手順
+それでは試しに1つ、マウスを乗せると状態が変化するリンクを作ってみましょう。
+
+step.1
+まずは始めに、元となる「a」のスタイルを作成します。
+
+a {
+font-weight:bold;
+text-decoration:none;
+}
+
+わかりやすいように、ちょっと太めの文字に指定しておきましょう。
+飾り付けも無しにします。
+
+step.2
+次に、上の「a」に対して、下の4つのスタイルで飾り付けを行っていきます。順番に気をつけながら記述しましょう。
+
+a:link { /*アクセスしたことのないリンク*/
+color:#0000FF; ←青色
+}
+a:visited { /*アクセスしたことのあるリンク*/
+color:#6600FF;　←紫色
+}
+a:hover {/*マウスが上に乗っている状態*/
+color:#FF0099;　←ピンク色
+text-decoration:underline;　←下線を表示
+}
+a:active {/*クリック中*/
+color:#33CC00;　←緑色
+}
+これらをまとめると、以下のような記述になります。
+
+[CSSの記述例]
+
+ 
+a {
+font-weight:bold;
+text-decoration:none;
+}
+
+a:link {
+color:#0000FF;
+}
+
+a:visited {
+color:#6600FF;
+}
+
+a:hover {
+color:#FF0099;
+text-decoration:underline;
+}
+
+a:active {
+color:#33CC00;
+}
+#clear_sample {	 	 
+	text-decoration: none; /* リンクの下線を出さない */	 	 
+   }	 	 
+   #clear_sample:link {	 	 
+	color: initial; /* 色の指定をリセット */	 	 
+   }	 	 
+   #clear_sample:visited {	 	 
+	color: initial; /* 色の指定をリセット */	 	 
+   }	 	 
+   #clear_sample:hover {	 	 
+	color: initial; /* 色の指定をリセット */	 	 
+   }
