@@ -26,7 +26,7 @@ new Vue({
 
   },
   computed:{
-    osenai:function(){
+    kieru:function(){
     if(Number(this.zanndaka)< Number(this.nyuryokugaku)){
       return true
     }
